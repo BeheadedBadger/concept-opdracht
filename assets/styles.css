@@ -1,3 +1,7 @@
+/*Import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -13,12 +17,46 @@
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 h2 h3 h4 {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --standard-text-colour: #0C0C0C;
+    --floating-text-colour: #F2F0FF;
+    --bg-projects: #F3F6F9;
+    --service-tile-text-colour: #7A7A7A;
+    --main-bg-color: #D84282;
+
+    --default-margin: 16px;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
