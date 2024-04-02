@@ -38,7 +38,6 @@
 
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-style: normal;
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
@@ -46,13 +45,12 @@
 .roboto-regular {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-style: normal;
+    font-size: 10px;
 }
 
 h1 h2 h3 h4 {
     font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 800;
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
@@ -83,19 +81,91 @@ h1 h2 h3 h4 {
     margin: 0 20px;
 }
 
-.white-container {
-    background-color: var(--bg-projects);
+.card {
+    flex-basis: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 0;
 }
+
+.card-inverted {
+    flex-direction: row-reverse;
+}
+
+img {
+    width: 100%;
+}
+
+.image-wrapper {
+    flex-basis: 400px;
+    flex-shrink: 1;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-wrapper {
+    flex-shrink: 0;
+    flex-basis: 200px;
+    margin: 0 20px;
+}
+
+.white-container {
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.grey-container {
+    background-color: var(--bg-projects);
+    padding: 30px 0;
+}
+
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
+.text-squiggle {
+    max-width: 30px;
+    flex-grow: 0;
+    margin: 10px 0;
+}
+
+body p {
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+.small-text {
+    font-size: 10px;
+}
+
+body a {
+    color: var(--purple);
+    text-decoration: none;
+}
+.projects-link {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.intro {
+    margin: 30px 30px;
+}
+
+.intro h3 {
+    color: var(--purple);
+    font-family: "Merriweather", serif;
+    font-weight: normal;
+    font-size: large;
+
+    margin: 10px 10px;
+    max-width: 400px;
+    text-align: center;
+}
 
 /* --------------- 4.1 Header ------------------------- */
 header {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(320deg, var(--blue) 0%, var(--purple) 100%);
+    background: linear-gradient(315deg, var(--blue) 0%, var(--purple) 100%);
     color: var(--floating-text-colour);
 }
 
@@ -113,7 +183,6 @@ h1 {
 }
 
 header p {
-    font-size: 22px;
     font-weight: 300;
     padding: 0 2vw 3vh 2vw;
 }
@@ -142,7 +211,6 @@ nav {
 }
 nav p {
     padding: 2vh 2vw 2vh 2vw;
-    font-size: 12px;
 }
 
 .header-image {
