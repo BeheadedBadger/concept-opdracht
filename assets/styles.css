@@ -226,3 +226,20 @@ header img {
 /* --------------- 4.2 Introduction ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+    .card {
+        flex-direction: column;
+    }
+    .card-inverted {
+        flex-direction: column;
+    }
+    .image-wrapper {
+        flex-basis: 0;
+    }
+    .text-wrapper {
+        flex-basis: 0;
+        margin-bottom: 10px;
+    }
+}
+
