@@ -172,12 +172,13 @@ header p {
     padding: 0 2vw 3vh 2vw;
 }
 
-header button {
+button {
     background-color: var(--pink);
     border-radius: 50px;
     padding: 1.4vh 1.4vw 1.4vh 1.4vw;
     outline: none;
     border: none;
+    min-width: 150px;
 
     color: var(--floating-text-colour);
     font-size: 12px;
@@ -257,6 +258,54 @@ header img {
     padding-bottom: 20px;
 }
 
+/* ------------------------------- 4.4 Contact form -------------------------------- */
+
+.contact {
+    background: linear-gradient(315deg, var(--blue) 0%, var(--purple) 100%);
+    color: white;
+}
+
+.contact-container {
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.contact button {
+    align-self: center;
+}
+
+/* ------------------------------- 4.5 Footer -------------------------------- */
+
+footer {
+    background-color: var(--standard-text-colour);
+    text-align: center;
+    color: var(--floating-text-colour);
+}
+
+footer p {
+    padding: 20px 20px;
+}
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
 
 @media screen and (max-width: 576px) {
@@ -274,4 +323,3 @@ header img {
         margin-bottom: 10px;
     }
 }
-
