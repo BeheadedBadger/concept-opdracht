@@ -146,21 +146,6 @@ body a {
     font-size: 10px;
 }
 
-.intro {
-    margin: 30px 30px;
-}
-
-.intro h3 {
-    color: var(--purple);
-    font-family: "Merriweather", serif;
-    font-weight: normal;
-    font-size: large;
-
-    margin: 10px 10px;
-    max-width: 400px;
-    text-align: center;
-}
-
 /* --------------- 4.1 Header ------------------------- */
 header {
     display: flex;
@@ -224,6 +209,53 @@ header img {
 }
 
 /* --------------- 4.2 Introduction ------------------- */
+.intro {
+    margin: 30px 30px;
+}
+
+.intro h3 {
+    color: var(--purple);
+    font-family: "Merriweather", serif;
+    font-weight: normal;
+    font-size: large;
+
+    margin: 10px 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+/*-------------------------------- 4.3 Services -------------------------------- */
+.services {
+    min-height: 250px;
+    min-width: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: var(--purple) solid 2px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px 10px 10px 10px;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services img {
+    height: 50px;
+    width: 50px;
+}
+
+.services-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.services h3 {
+    color: var(--purple);
+    font-family: "Merriweather", serif;
+    padding-bottom: 20px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
 
