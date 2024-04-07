@@ -1,0 +1,407 @@
+/*Import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --standard-text-colour: #0C0C0C;
+    --floating-text-colour: #F2F0FF;
+    --bg-projects: #F3F6F9;
+    --service-tile-text-colour: #7A7A7A;
+    --main-bg-color: #D84282;
+
+    --default-margin: 16px;
+}
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+h1 h2 h3 h4 {
+    font-family: "Merriweather", serif;
+    font-weight: 800;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+.bgtext {
+    position: relative;
+}
+
+.bgtext::after {
+    position: absolute;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 300px;
+    font-weight: 900;
+    left: -50%;
+    transform: translate(-50%, 0%);
+}
+
+.bgtext-work::after {
+    color: white;
+    content: "work";
+    transform: translate(-50%, -45%);
+}
+
+.bgtext-hello::after {
+    color: var(--floating-text-colour);
+    content: "hello";
+}
+
+.bgtext-services::after {
+    color: var(--floating-text-colour);
+    content: "services";
+    font-size: 200px;
+    transform: translate(-15%, -110%);
+}
+
+/* --------------- 3.1 Reusables ----------------------- */
+.inner-container {
+    flex-basis: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 20px;
+    position: relative;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 100%;
+}
+
+.inner-container-row {
+    flex-basis: 800px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 100px 20px;
+}
+
+.card {
+    flex-basis: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 0;
+    z-index: 1;
+}
+
+.card-inverted {
+    flex-direction: row-reverse;
+}
+
+img {
+    width: 100%;
+}
+
+.image-wrapper {
+    flex-basis: 400px;
+    flex-shrink: 1;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-wrapper {
+    flex-shrink: 0;
+    flex-basis: 200px;
+    margin: 0 20px;
+}
+
+.white-container {
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.grey-container {
+    background-color: var(--bg-projects);
+    padding: 30px 0;
+}
+
+.triangle{
+    width: 100%;
+    height: 50px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%);
+    z-index: -1;
+    margin-top: -1px;
+}
+.purple-gradient {
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+}
+.white-to-gray {
+    background-color: var(--bg-projects);
+    clip-path: polygon(0% 100%, 0% 0%, 100% 100%, 100% 100%);
+}
+.gray-to-white {
+    background-color: var(--bg-projects);
+}
+.white-to-purple-gradient {
+    clip-path: polygon(0% 100%, 0% 0%, 100% 100%, 100% 100%);
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    margin-top: 1px;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+.text-squiggle {
+    max-width: 30px;
+    flex-grow: 0;
+    margin: 10px 0;
+}
+
+body p {
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+.small-text {
+    font-size: 10px;
+    z-index: 1;
+}
+
+body a {
+    color: var(--purple);
+    text-decoration: none;
+}
+.projects-link {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+a::after {
+    display: inline-block;
+    margin: 3px 10px;
+    content: "";
+    width: 5%;
+    height: 1px;
+    background-color: var(--purple);
+    transition: width .35s ease-in-out;
+    position: marker;
+}
+
+a:hover::after {
+    width: 50%;
+}
+
+/* --------------- 4.1 Header ------------------------- */
+header {
+    display: flex;
+    flex-direction: column;
+    color: var(--floating-text-colour);
+    position: relative;
+}
+header .outer-container {
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    padding-bottom: 30px;
+}
+
+header .inner-container {
+    flex-basis: 600px;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: xx-large;
+    text-align: center;
+    padding: 10vh 2vw 2vh 2vw;
+}
+
+header p {
+    font-weight: 300;
+    padding: 0 2vw 3vh 2vw;
+}
+
+button {
+    background-color: var(--pink);
+    border-radius: 50px;
+    padding: 1.4vh 1.4vw 1.4vh 1.4vw;
+    outline: none;
+    border: none;
+    min-width: 150px;
+
+    color: var(--floating-text-colour);
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 5vh;
+    text-transform: uppercase;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--floating-text-colour);
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+}
+nav p {
+    padding: 2vh 2vw 2vh 2vw;
+}
+
+.header-image {
+    max-width: 40px;
+    flex-grow: 0;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    overflow: visible;
+}
+
+header img {
+    width: 100%;
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+.intro {
+    margin: 30px 30px;
+    z-index: 1;
+}
+
+.intro h3 {
+    color: var(--purple);
+    font-family: "Merriweather", serif;
+    font-weight: normal;
+    font-size: large;
+
+    margin: 10px 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+/*-------------------------------- 4.3 Services -------------------------------- */
+.services {
+    min-height: 250px;
+    min-width: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: white;
+    border: var(--purple) solid 2px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px 10px 10px 10px;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services img {
+    height: 50px;
+    width: 50px;
+}
+
+.services-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.services h3 {
+    color: var(--purple);
+    font-family: "Merriweather", serif;
+    padding-bottom: 20px;
+}
+
+/* ------------------------------- 4.4 Contact form -------------------------------- */
+
+.contact {
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--floating-text-colour);
+}
+
+.contact-container {
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.contact button {
+    align-self: center;
+}
+
+/* ------------------------------- 4.5 Footer -------------------------------- */
+
+footer {
+    background-color: var(--standard-text-colour);
+    text-align: center;
+    color: var(--floating-text-colour);
+}
+
+footer p {
+    padding: 20px 20px;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+    .card {
+        flex-direction: column;
+    }
+    .card-inverted {
+        flex-direction: column;
+    }
+    .image-wrapper {
+        flex-basis: 0;
+    }
+    .text-wrapper {
+        flex-basis: 0;
+        margin-bottom: 10px;
+    }
+}
